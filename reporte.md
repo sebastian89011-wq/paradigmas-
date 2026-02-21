@@ -242,24 +242,9 @@ Subir con `git push`.
    - **Settings → Pages**
    - Seleccionar rama generada por Actions.
 
-## Enlaces
 
-Repositorio del portafolio en GitHub:  
-[Enlace aquí]
 
-Página estática en GitHub Pages:  
-[Enlace aquí]
 
-## Conversión a PDF
+https://github.com/sebastian89011-wq/mi-sitio
 
-Para convertir este archivo Markdown a PDF se puede utilizar:
 
-- Extensión "Markdown PDF" en Visual Studio Code
-- Pandoc
-- Exportación directa desde VS Code
-
-El archivo PDF generado es el que se sube a Classroom.
-
-## Evidencia
-
-Este archivo Markdown forma parte del repositorio del portafolio y fue utilizado como primera entrada en la página estática generada con Hugo y publicada con GitHub Pages.
