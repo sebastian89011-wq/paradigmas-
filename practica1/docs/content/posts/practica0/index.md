@@ -1,4 +1,10 @@
-﻿# Reporte – Markdown, Git, GitHub, Hugo y GitHub Actions
++++
+date = '2026-03-13T20:58:26-07:00'
+draft = false
+title = 'Practica0'
++++
+
+# Reporte – Markdown, Git, GitHub, Hugo y GitHub Actions
 
 **Autor:**  
 **Materia:**  
