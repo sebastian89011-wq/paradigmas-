@@ -3,6 +3,18 @@
 
 #define MAX_JOBS 10
 
+typedef enum
+{
+    NORMAL,
+    URGENTE
+} Tf_prioridad;
+
+typedef enum
+{
+    EN_COLA,
+    IMPRIMIENDO,
+    COMPLETADO
+} Tf_estado;
 
 typedef struct datos
 {
@@ -23,18 +35,6 @@ typedef struct
     int size; // cantidad actual de elementos
 } QueueStatic_t;
 
-typedef enum
-{
-    NORMAL,
-    URGENTE
-} Tf_prioridad;
-
-typedef enum
-{
-    EN_COLA,
-    IMPRIMIENDO,
-    COMPLETADO
-} Tf_estado;
 
 void qs_init(QueueStatic_t *q);
 int qs_is_empty(const QueueStatic_t *q);

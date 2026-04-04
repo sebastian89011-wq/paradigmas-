@@ -209,7 +209,7 @@ int qd_enqueue(QueueDynamic_t *q, Ts_datos job)
         }
         else
         {
-            nuevo_nodo = q->head;
+            nuevo_nodo->next = q->head;
             q->head = nuevo_nodo;
         }
     }
