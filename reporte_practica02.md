@@ -1,8 +1,8 @@
 ---
 title: "Práctica 2"
 date: 2026-04-03
-draft: false
-marp: true  
+draft: true
+marp: true
 ---
 
 # Reporte de Práctica 02: Simulador de Estacionamiento
