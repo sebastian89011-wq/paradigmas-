@@ -6,9 +6,9 @@ title = 'Practica0'
 
 # Reporte – Markdown, Git, GitHub, Hugo y GitHub Actions
 
-**Autor:**  
-**Materia:**  
-**Fecha:**  
+**Autor:** Sebastian Calderon  
+**Materia:** 40032 - Paradigmas de la Programacion  
+**Fecha:** 13 de marzo de 2026  
 
 ## Primera sesión
 
@@ -252,5 +252,4 @@ Subir con `git push`.
 
 
 https://github.com/sebastian89011-wq/mi-sitio
-
 

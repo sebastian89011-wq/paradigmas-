@@ -49,7 +49,8 @@ Durante este proceso, Stack descargó automáticamente el compilador **GHC** y c
 
 
 <!-- IMAGEN: captura de stack build -->
-![alt text](image-1.png)
+![Instalacion y compilacion del proyecto con Stack](image-1.png)
+
 ---
 
 ## 2. Descripción de la aplicación TODO
@@ -67,7 +68,7 @@ La aplicación implementada es un sistema básico de **lista de tareas (TODO lis
 
 
 
-    ![alt text](image-2.png)
+![Estructura del proyecto Haskell](image-2.png)
 
 ---
 
@@ -134,7 +135,7 @@ main = do
 
 
 
-![alt text](image-3.png)
+![Ejecucion del programa TODO en Haskell](image-3.png)
 
 ---
 

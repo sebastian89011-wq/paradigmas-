@@ -6,7 +6,7 @@ title = 'Practica1: Elementos basicos de los lenguajes de programacion'
 
 # PP_PL1 - Cola de impresion (Informe)
 
-Referencia: Guia de practica asignada.
+Referencia: Guia de la practica `PP_PL1_Gallegos_40032`.
 
 ## 1. Introduccion
 
@@ -174,9 +174,9 @@ Copia 2 - pagina 1 de 5
 | Complejidad Dequeue | O(n) (debido al desplazamiento). | O(1) |
 | Riesgos principales | Overflow logico (cola llena). | Fugas de memoria, malloc puede fallar (NULL). |
 
-## 7. Observaciones y Correcciones Recomendadas
+## 7. Mejoras identificadas durante la practica
 
-Antes de entregar, asegurate de revisar estos detalles en tu codigo fuente:
+Durante la revision del codigo se identificaron varios puntos de mejora para hacer la implementacion mas consistente y segura:
 
 - Unificar asignacion de ID: Decide si el contador vive en `main` o en `crear_nodo` para evitar inconsistencias.
 - Corregir `qd_enqueue` (prioridad): Usa `job.prioridad` (no `job.estado`). El bloque para prioridad urgente debe ser:
@@ -227,20 +227,17 @@ Porque es una operacion estrictamente de inspeccion (Lector). Modificarla rompe 
 
 ## 9. Evidencia de Ejecucion 
 
-- Captura agregando hasta `MAX_JOBS` para mostrar el mensaje **Cola llena**.
-    ![Cola de impresión](img/captura_impresora.png)
-- Capturas de `enqueue`/`dequeue` demostrando el comportamiento **FIFO**.
-    ![alt text](image.png)
-    ![alt text](<Captura de pantalla 2026-03-13 220852.png>)
-- Capturas mostrando malloc 
-    ![alt text](image-1.png)
+- Funcion `qd_dequeue` liberando nodos y actualizando la cabeza de la cola.
+    ![Funcion dequeue en cola dinamica](image.png)
+- Funcion `qd_enqueue` insertando nodos en la cola dinamica.
+    ![Funcion enqueue en cola dinamica](<Captura de pantalla 2026-03-13 220852.png>)
+- Creacion de nodos con `malloc`.
+    ![Creacion de nodo con malloc](image-1.png)
 
 ## 10. Referencias
 
 - Guia de la practica: `PP_PL1_Gallegos_40032`.
 
-![Cola de impresión](img/captura_impresora.png)
-
 ## 11. Conclusiones
 
-En general la practica fue sencilla en cosas que si podria mejorar seria a la hora de hacer mas modular el programa, esta practica me ayudo a entender bien la cola y tambien el como aplicarla a un entorno real en este caso un impresora
+La practica permitio comprender el funcionamiento de una cola y comparar una implementacion estatica con una dinamica. El caso de la cola de impresion ayudo a relacionar la estructura FIFO con un problema real, donde cada trabajo debe atenderse de forma ordenada y conservar su informacion durante el proceso. Como mejora principal, el programa podria hacerse mas modular para separar mejor la captura de datos, la logica de la cola y la simulacion de impresion.

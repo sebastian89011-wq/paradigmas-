@@ -15,7 +15,7 @@ marp: true
 | Materia | 40032 - Paradigmas de la Programación |
 | Docente | M.I. José Carlos Gallegos Mariscal |
 | Grupo | 942 |
-| Entregable | PP_PL2_Apellido_Matricula |
+| Entregable | PP_PL2_Calderon_379259 |
 
 ---
 
@@ -45,11 +45,9 @@ Las reglas fundamentales del sistema son:
 
 ## 2. Modelo del dominio
 
-### Diagrama UML
+### Modelo general
 
-
-
-El diagrama incluye las relaciones de herencia entre `Vehicle`, `Car` y `Motorcycle`; la composición entre `ParkingLot`, `ParkingSpot` y `Ticket`; y la dependencia de `ParkingLot` hacia la interfaz `RatePolicy`.
+El modelo del dominio se documenta mediante la lista de clases, sus responsabilidades y los fragmentos de codigo que muestran herencia, composicion, abstraccion y polimorfismo.
 
 ### Lista de clases y responsabilidades
 
@@ -70,7 +68,7 @@ El diagrama incluye las relaciones de herencia entre `Vehicle`, `Car` y `Motorcy
 ## 3. Evidencia de conceptos POO *(obligatorio)*
 
 ### 3.1 Encapsulación
-> Método que valida y protege el estado interno — ningún spot puede quedar con dos vehículos al mismo tiempo.
+
 
 ```python
 
