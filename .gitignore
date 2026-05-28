@@ -1,3 +1,4 @@
-docs/themes/
+docs/themes/*
+!docs/themes/ananke/
 docs/public/
 resources/
