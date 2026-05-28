@@ -1,0 +1,67 @@
+{{ define "header" }}
+  <header class="portfolio-topbar">
+    {{ partials.Include "site-navigation.html" . }}
+  </header>
+{{ end }}
+
+{{ define "main" }}
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $ordered := sort $posts "File.Dir" "asc" }}
+
+  <section class="portfolio-hero" style="--hero-image: url('{{ "posts/practica3/image.png" | relURL }}');">
+    <div class="portfolio-hero__content">
+      <p class="portfolio-eyebrow">UABC / 40032 / Evidencias de aprendizaje</p>
+      <h1>Portafolio de Paradigmas de la Programaci&oacute;n</h1>
+      <p class="portfolio-hero__lead">
+        Practicas, reportes y codigo reunidos en un sitio Hugo publicado con GitHub Pages.
+      </p>
+      <div class="portfolio-actions" aria-label="Acciones principales">
+        <a class="portfolio-button portfolio-button--primary" href="#practicas">Ver pr&aacute;cticas</a>
+        <a class="portfolio-button portfolio-button--secondary" href="https://github.com/sebastian89011-wq/paradigmas-">Abrir repositorio</a>
+      </div>
+      <dl class="portfolio-metrics">
+        <div>
+          <dt>{{ len $ordered }}</dt>
+          <dd>entregas</dd>
+        </div>
+        <div>
+          <dt>4</dt>
+          <dd>paradigmas</dd>
+        </div>
+        <div>
+          <dt>Hugo</dt>
+          <dd>GitHub Pages</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="portfolio-section portfolio-intro" aria-labelledby="enfoque">
+    <div class="portfolio-section__inner portfolio-split">
+      <div>
+        <p class="portfolio-kicker">Enfoque del curso</p>
+        <h2 id="enfoque">Un recorrido por formas distintas de pensar programas</h2>
+      </div>
+      <p>
+        Este portafolio organiza las evidencias de la materia: herramientas de publicacion,
+        estructuras de datos en C, programacion orientada a objetos con Python, programacion
+        funcional con Haskell y programacion logica con Prolog.
+      </p>
+    </div>
+  </section>
+
+  <section id="practicas" class="portfolio-section" aria-labelledby="practicas-title">
+    <div class="portfolio-section__inner">
+      <header class="portfolio-section-heading">
+        <p class="portfolio-kicker">Entregables</p>
+        <h2 id="practicas-title">Pr&aacute;cticas del portafolio</h2>
+      </header>
+
+      <div class="portfolio-grid">
+        {{ range $ordered }}
+          {{ partial "portfolio-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

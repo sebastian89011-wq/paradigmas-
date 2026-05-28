@@ -1,7 +1,7 @@
 +++
 date = '2026-03-13T20:48:12-07:00'
 draft = false
-title = 'Practica4: Programacion logica en Prolog'
+title = 'Práctica 4: Programación lógica en Prolog'
 +++
 
 # Reporte de Practica 04: Programacion logica en Prolog

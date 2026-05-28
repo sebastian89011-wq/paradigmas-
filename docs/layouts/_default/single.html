@@ -1,0 +1,33 @@
+{{ define "header" }}
+  <header class="portfolio-topbar">
+    {{ partials.Include "site-navigation.html" . }}
+  </header>
+{{ end }}
+
+{{ define "main" }}
+  {{ $pdf := .Resources.GetMatch "index.pdf" }}
+  {{ if not $pdf }}
+    {{ $pdf = .Resources.GetMatch "*.pdf" }}
+  {{ end }}
+
+  <article class="portfolio-article">
+    <header class="portfolio-article__header">
+      <a class="portfolio-back" href="{{ "/" | relURL }}#practicas">Portafolio</a>
+      <p class="portfolio-eyebrow">Reporte de pr&aacute;ctica</p>
+      <h1>{{ .Title }}</h1>
+      {{ if not .Date.IsZero }}
+        <p class="portfolio-article__date">{{ .Date | time.Format "2 Jan 2006" }}</p>
+      {{ end }}
+      <div class="portfolio-actions portfolio-actions--article">
+        <a class="portfolio-button portfolio-button--secondary" href="{{ "/" | relURL }}#practicas">Volver al inicio</a>
+        {{ with $pdf }}
+          <a class="portfolio-button portfolio-button--primary" href="{{ .RelPermalink }}">Abrir PDF</a>
+        {{ end }}
+      </div>
+    </header>
+
+    <div class="portfolio-content">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}

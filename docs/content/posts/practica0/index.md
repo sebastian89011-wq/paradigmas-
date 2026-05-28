@@ -1,7 +1,7 @@
 +++
 date = '2026-03-13T20:58:26-07:00'
 draft = false
-title = 'Practica0'
+title = 'Práctica 0: Markdown, Git, Hugo y GitHub Pages'
 +++
 
 # Reporte – Markdown, Git, GitHub, Hugo y GitHub Actions
@@ -252,4 +252,3 @@ Subir con `git push`.
 
 
 https://github.com/sebastian89011-wq/mi-sitio
-

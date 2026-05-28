@@ -1,7 +1,7 @@
 +++
 date = '2026-03-13T20:44:50-07:00'
 draft = false
-title = 'Practica1: Elementos basicos de los lenguajes de programacion'
+title = 'Práctica 1: Elementos básicos de los lenguajes de programación'
 +++
 
 # PP_PL1 - Cola de impresion (Informe)

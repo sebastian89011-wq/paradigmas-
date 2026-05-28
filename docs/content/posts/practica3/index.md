@@ -1,7 +1,7 @@
 +++
 date = '2026-03-13T20:47:47-07:00'
 draft = false
-title = 'Practica3'
+title = 'Práctica 3: Programación funcional en Haskell'
 +++
 
 # Reporte: Instalación del entorno y aplicación TODO en Haskell

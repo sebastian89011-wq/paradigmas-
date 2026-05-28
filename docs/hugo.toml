@@ -1,4 +1,29 @@
 baseURL = "https://sebastian89011-wq.github.io/paradigmas-/"
 locale = "es"
-title = "Mi sitio Hugo"
+title = "Portafolio Paradigmas"
 theme = "ananke"
+
+[pagination]
+  pagerSize = 12
+
+[params]
+  author = "Sebastian Calderon"
+  description = "Portafolio de evidencias para la materia Paradigmas de la Programacion."
+  read_more_copy = "Ver practica"
+  body_classes = "portfolio-body"
+  background_color_class = "portfolio-nav-bg"
+  mainSections = ["posts"]
+
+[params.ananke]
+  custom_css = ["portfolio.css"]
+  show_recent_posts = false
+
+[[menu.main]]
+  name = "Practicas"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  name = "Repositorio"
+  url = "https://github.com/sebastian89011-wq/paradigmas-"
+  weight = 20

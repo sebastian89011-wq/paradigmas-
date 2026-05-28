@@ -1,0 +1,41 @@
+{{ $slug := "" }}
+{{ with .File }}
+  {{ $slug = path.Base (strings.TrimSuffix "/" .Dir) }}
+{{ end }}
+
+{{ $catalog := dict
+  "practica0" (dict "label" "Fundamentos del sitio" "summary" "Markdown, Git, GitHub, Hugo y automatizacion para publicar evidencias en la web." "stack" "Markdown / Git / Hugo" "tone" "teal" "symbol" "MD")
+  "practica1" (dict "label" "Imperativo y memoria" "summary" "Simulador de cola de impresion en C con estructuras estaticas y dinamicas." "stack" "C / FIFO / Memoria" "tone" "blue" "symbol" "C")
+  "practica2" (dict "label" "Orientado a objetos" "summary" "Sistema de estacionamiento con clases, encapsulacion, polimorfismo y una interfaz Flask." "stack" "Python / POO / MVC" "tone" "amber" "symbol" "PY")
+  "practica3" (dict "label" "Funcional" "summary" "Aplicacion TODO en Haskell usando listas, recursion y composicion de funciones." "stack" "Haskell / Stack" "tone" "rose" "symbol" "HS")
+  "practica4" (dict "label" "Logico" "summary" "Programas en Prolog con hechos, reglas, consultas, recursion y busqueda por estados." "stack" "Prolog / Reglas" "tone" "green" "symbol" "PL")
+}}
+
+{{ $item := index $catalog $slug }}
+{{ if not $item }}
+  {{ $item = dict "label" "Practica" "summary" (.Summary | plainify) "stack" "Reporte" "tone" "neutral" "symbol" "PP" }}
+{{ end }}
+
+{{ $image := "" }}
+{{ with .Resources.ByType "image" }}
+  {{ with index . 0 }}
+    {{ $image = .RelPermalink }}
+  {{ end }}
+{{ end }}
+
+<article class="portfolio-card is-{{ index $item "tone" }}">
+  <a class="portfolio-card__media" href="{{ .RelPermalink }}" aria-label="Abrir {{ .Title }}">
+    {{ if $image }}
+      <img src="{{ $image }}" alt="Evidencia visual de {{ .Title }}">
+    {{ else }}
+      <span>{{ index $item "symbol" }}</span>
+    {{ end }}
+  </a>
+  <div class="portfolio-card__body">
+    <p class="portfolio-card__label">{{ index $item "label" }}</p>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ index $item "summary" }}</p>
+    <div class="portfolio-card__meta">{{ index $item "stack" }}</div>
+    <a class="portfolio-card__link" href="{{ .RelPermalink }}">Ver pr&aacute;ctica</a>
+  </div>
+</article>

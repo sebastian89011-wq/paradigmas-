@@ -1,5 +1,5 @@
 ---
-title: "Práctica 2"
+title: "Práctica 2: Simulador de estacionamiento"
 date: 2026-04-03
 draft: false
 marp: true  
